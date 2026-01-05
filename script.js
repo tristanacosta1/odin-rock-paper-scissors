@@ -24,8 +24,8 @@ function getHumanChoice()
     return choice;
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+let humanSelection = getHumanChoice();
+let computerSelection = getComputerChoice();
 
 function playGame()
 {
@@ -79,6 +79,9 @@ function playGame()
             humanSelection = getHumanChoice();
             computerSelection = getComputerChoice();
         }
+
         playRound(humanSelection, computerSelection);
     }
 }
+
+playGame();
