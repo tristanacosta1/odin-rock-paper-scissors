@@ -18,7 +18,9 @@ function getComputerChoice(number)
 
 function getHumanChoice() 
 {
-    prompt("Rock, paper, or scissors?");
+    let choice = prompt("rock, paper, or scissors?");
+    return choice;
 }
 
 console.log(getComputerChoice(randomNumber));
+console.log(getHumanChoice());
