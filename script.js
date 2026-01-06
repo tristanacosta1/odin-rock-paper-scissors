@@ -1,5 +1,3 @@
-
-
 let randomNumber = Math.floor(Math.random() * 3) + 1;
 
 function getComputerChoice(number) 
@@ -25,7 +23,7 @@ function getHumanChoice()
 }
 
 let humanSelection = getHumanChoice();
-let computerSelection = getComputerChoice();
+let computerSelection = getComputerChoice(randomNumber);
 
 function playGame()
 {
@@ -76,8 +74,10 @@ function playGame()
     {
         if (i > 0)
         {
+            randomNumber = Math.floor(Math.random() * 3) + 1;
+
             humanSelection = getHumanChoice();
-            computerSelection = getComputerChoice();
+            computerSelection = getComputerChoice(randomNumber);
         }
 
         playRound(humanSelection, computerSelection);
