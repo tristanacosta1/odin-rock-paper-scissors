@@ -17,7 +17,9 @@ const paper = document.createElement("button");
 const scissors = document.createElement("button");
 
 const scoreboard = document.createElement("div");
+const h = document.createElement("h1");
 const humanScoreDisplay = document.createElement("h1");
+const c = document.createElement("h1");
 const computerScoreDisplay = document.createElement("h1");
 const roundWinner = document.createElement("h5");
 const gameWinner = document.createElement("h3");
@@ -31,9 +33,14 @@ scoreboard.appendChild(computerScoreDisplay);
 scoreboard.appendChild(roundWinner);
 scoreboard.appendChild(gameWinner);
 
+humanScoreDisplay.insertAdjacentElement("beforebegin", h);
+computerScoreDisplay.insertAdjacentElement("beforebegin", c);
+
 rock.textContent = "Rock";
 paper.textContent = "Paper";
 scissors.textContent = "Scissors";
+h.textContent = "H";
+c.textContent = "C";
 
 rock.addEventListener('click', () => playRound("rock", getComputerChoice()));
 paper.addEventListener('click', () => playRound("paper", getComputerChoice()));
